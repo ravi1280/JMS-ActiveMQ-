@@ -7,6 +7,7 @@
     <groupId>lk.jiat.ee</groupId>
     <artifactId>JMS-WEB</artifactId>
     <version>1.0</version>
+    <packaging>war</packaging>
     <name>jms-web</name>
 
     <properties>
