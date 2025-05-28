@@ -13,7 +13,7 @@ public class MessageSender {
             connection.start();
 
             Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-            Topic topic = session.createTopic("News");
+            Topic topic = session.createTopic("activeMqTopic");
 
             MessageProducer producer = session.createProducer(topic);
             TextMessage textMessage = session.createTextMessage("Hello World This Message is Active MQ Client");
