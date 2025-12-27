@@ -6,7 +6,9 @@ import javax.jms.*;
 
 public class MessageSender {
     public static void main(String[] args) {
+
         ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://localhost:61616");
+
         try {
             Connection connection = connectionFactory.createConnection();
             connection.setClientID("ClientAPP1");
@@ -14,6 +16,7 @@ public class MessageSender {
 
             Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
             Topic topic = session.createTopic("activeMqTopic");
+//            Topic topic = session.createTopic("news");
 
             MessageProducer producer = session.createProducer(topic);
             TextMessage textMessage = session.createTextMessage("Hello World This Message is Active MQ Client");

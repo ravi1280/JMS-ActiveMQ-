@@ -9,7 +9,7 @@ public class MessageReceiver {
         ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://localhost:61616");
         try {
             Connection connection = connectionFactory.createConnection();
-            connection.setClientID("ClientAPP3");
+            connection.setClientID("ClientAPP2");
             connection.start();
 
             Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
@@ -27,7 +27,7 @@ public class MessageReceiver {
 
               }
           });
-
+//stop nowee thiya ganna
           while (true) {
 
           }
